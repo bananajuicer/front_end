@@ -6,23 +6,67 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | QR code component</title>
+  <title>QR code component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+    margin: 0;  /* убирает внешние отступы у ВСЕХ элементов */
+    padding: 0; /* убирает внутренние отступы у ВСЕХ элементов */
+    /* Рассматриваем границы и отступы как часть общего размера */  
+    /* размеры включают padding+border */
+    box-sizing: border-box;
+
+     body {
+    background-color: #D5E1EF;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh; /*минимальную высоту элемента, равную 100% высоты области просмотра (viewport)*/
+    display: flex; 
+    align-items: center; /* центрирует ВЕРТИКАЛЬНО */
+    justify-content: center;  /* центрирует ГОРИЗОНТАЛЬНО */
+    position: relative; /* body становится "якорем" */
+
+  }
+
+  .card {
+    background-color: white;
+    width: 320px;
+    padding: 16px; /* внутренние отступы со всех сторон */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card h1 {
+    font-size: 22px;
+    color: #1F314F;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700; /*жирность шрифта*/
+  }
+
+  .card p {
+    font-size: 15px;
+    color: #7D889E;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  }
+
   </style>
 </head>
 <body>
+  <div class="card">
+    <img src="./images/image-qr-code.png" alt="QR-code">
+    <h1>Improve your front-end skills by building projects</h1>
+    <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+  </div>
 
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 </html>
